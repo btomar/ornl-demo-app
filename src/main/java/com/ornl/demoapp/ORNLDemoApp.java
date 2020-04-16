@@ -8,7 +8,7 @@ package com.ornl.demoapp;
  */
 
 
-public class Main {
+public class ORNLDemoApp {
     private static ShoppingCart shoppingCart = new ShoppingCart();
     public static void main(String[] args) throws Exception {
 

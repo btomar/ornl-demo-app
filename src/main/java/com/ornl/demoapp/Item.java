@@ -1,11 +1,22 @@
 package com.ornl.demoapp;
 
+/**
+ * Parent Class from which most of the components inherit
+ */
+
 public class Item {
     private String model;
     private String manufacturer;
     private Double price;
     private int quantity;
 
+    /**
+     * Constructor
+     * @param model
+     * @param manufacturer
+     * @param price
+     * @param quantity
+     */
     public Item(String model, String manufacturer, Double price, int quantity) {
         this.model = model;
         this.manufacturer = manufacturer;

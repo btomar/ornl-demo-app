@@ -3,6 +3,10 @@ package com.ornl.demoapp;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Main Shopping Cart implementation with add remove methods
+ */
+
 public class ShoppingCart implements ICart {
     private final Map<PersonalComputer, Integer> list;
 
@@ -10,12 +14,25 @@ public class ShoppingCart implements ICart {
         this.list = new HashMap<>();;
     }
 
+    /**
+     *
+     * @return String
+     */
+
     @Override
     public String toString() {
         return "ShoppingCart{" +
                 "list=" + list +
                 '}';
     }
+
+    /**
+     *
+     * @param personalComputer
+     * @param quantity
+     * @return Integer
+     * @throws Exception
+     */
 
     @Override
     public int addProducts(PersonalComputer personalComputer, int quantity) throws Exception {
@@ -27,6 +44,14 @@ public class ShoppingCart implements ICart {
         }
         return 0;
     }
+
+    /**
+     *
+     * @param personalComputer
+     * @param quantity
+     * @return Integer
+     * @throws Exception
+     */
 
     @Override
     public int removeProducts(PersonalComputer personalComputer, int quantity) throws Exception {
@@ -46,6 +71,10 @@ public class ShoppingCart implements ICart {
         return 0;
     }
 
+    /**
+     * Calculates total cost of items in cart
+     * @return String
+     */
     @Override
     public String calculateTotal() {
         String s = "\nShopping cart contains " + list.size() + ((list.size() == 1) ? " item" : " items") + "\n";
